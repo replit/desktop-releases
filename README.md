@@ -1,10 +1,14 @@
 # Desktop Release Server
 
-Based on [Hazel](https://github.com/vercel/hazel)
+<span><a href="https://replit.com/@util/desktop-releases" title="Run on Replit badge"><img src="https://replit.com/badge/github/replit/desktop-releases" alt="Run on Replit badge" /></a></span>
+
+Update release server based on [Hazel](https://github.com/vercel/hazel) and used by the [desktop app](https://github.com/replit/desktop).
 
 ## Usage
 
-Once the app is deployed, paste the deployment address into your code (please keep in mind that updates should only occur in the production version of the app, not while developing):
+Deploy the app to https://desktop-app-releases.replit.app/
+
+Then set the following code in the Electron client:
 
 ```js
 const { app, autoUpdater } = require('electron')

@@ -12,7 +12,7 @@
     "fetch": "1.1.0",
     "finalhandler": "1.1.0",
     "handlebars": "4.0.11",
-    "jest": "24.0.0",
+    "jest": "29.5.0",
     "micro": "9.3.3",
     "ms": "2.1.1",
     "node-fetch": "2.0.0",

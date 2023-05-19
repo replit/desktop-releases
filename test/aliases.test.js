@@ -11,6 +11,11 @@ describe('Aliases', () => {
     const result = aliases('darwin')
     expect(result).toBe('darwin')
   })
+  
+  it('Should return supported filetypes like `.nupkg`', () => {
+    const result = aliases('nupkg')
+    expect(result).toBe('nupkg')
+  })
 
   it('Should return false if no platform is found', () => {
     const result = aliases('test')

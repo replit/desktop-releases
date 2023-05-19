@@ -5,29 +5,29 @@ const Cache = require('../lib/cache')
 describe('Cache', () => {
   it('should throw when account is not defined', () => {
     expect(() => {
-      const config = { repository: 'hyper' }
+      const config = { repository: 'desktop' }
       new Cache(config)
     }).toThrow(/ACCOUNT/)
   })
 
   it('should throw when repository is not defined', () => {
     expect(() => {
-      const config = { account: 'zeit' }
+      const config = { account: 'replit' }
       new Cache(config)
     }).toThrow(/REPOSITORY/)
   })
 
   it('should throw when token is defined and url is not', () => {
     expect(() => {
-      const config = { account: 'zeit', repository: 'hyper', token: 'abc' }
+      const config = { account: 'replit', repository: 'desktop', token: 'abc' }
       new Cache(config)
     }).toThrow(/URL/)
   })
 
   it('should run without errors', () => {
     const config = {
-      account: 'zeit',
-      repository: 'hyper',
+      account: 'replit',
+      repository: 'desktop',
       token: process.env.TOKEN,
       url: process.env.URL
     }
@@ -37,8 +37,8 @@ describe('Cache', () => {
 
   it('should refresh the cache', async () => {
     const config = {
-      account: 'zeit',
-      repository: 'hyper',
+      account: 'replit',
+      repository: 'desktop',
       token: process.env.TOKEN,
       url: process.env.URL
     }
@@ -52,8 +52,8 @@ describe('Cache', () => {
 
   it('should set platforms correctly', async () => {
     const config = {
-      account: 'zeit',
-      repository: 'hyper',
+      account: 'replit',
+      repository: 'desktop',
       token: process.env.TOKEN,
       url: process.env.URL
     }

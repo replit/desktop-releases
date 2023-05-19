@@ -11,8 +11,8 @@ afterEach(() => {
 describe('Server', () => {
   it('Should start without errors', async () => {
     process.env = {
-      ACCOUNT: 'zeit',
-      REPOSITORY: 'hyper'
+      ACCOUNT: 'replit',
+      REPOSITORY: 'desktop'
     }
 
     const run = require('../lib/server')

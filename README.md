@@ -13,7 +13,7 @@ Then set the following code in the Electron client:
 ```js
 const { app, autoUpdater } = require('electron')
 
-const server = <your-deployment-url>
+const server = "https://desktop-app-releases.replit.app"
 const url = `${server}/update/${process.platform}/${app.getVersion()}`
 
 autoUpdater.setFeedURL({ url })
@@ -34,7 +34,7 @@ The following environment variables must be set:
 
 The token must be set to a [fine-grained personal access token](https://github.com/settings/tokens?type=beta) with access to the [replit/desktop](https://github.com/replit/desktop) repo and content-read permissions.
 
-The current token is set to expire on April 29th, 2024
+Such tokens have a max expiry date of 1 year so make sure to rotate them accordingly.
 
 ## Routes
 
@@ -52,6 +52,8 @@ If the latest version of the application wasn't yet pulled from [GitHub Releases
 
 Accepts a platform (like "darwin" or "win32") to download the appropriate copy your app for. I generally suggest using either `process.platform` ([more](https://nodejs.org/api/process.html#process_process_platform)) or `os.platform()` ([more](https://nodejs.org/api/os.html#os_os_platform)) to retrieve this string.
 
+Also used to download certain platform-specific binaries like `.dmg` and `nupkg` files.
+
 If the cache isn't filled yet or doesn't contain a download link for the specified platform, it will respond like `/`.
 
 ### /update/:platform/:version
@@ -65,3 +67,9 @@ If the latest version of the application wasn't yet pulled from [GitHub Releases
 This endpoint was specifically crafted for the Windows platform (called "win32" [in Node.js](https://nodejs.org/api/process.html#process_process_platform)).
 
 Since the [Windows version](https://github.com/Squirrel/Squirrel.Windows) of Squirrel (the software that powers auto updates inside [Electron](https://www.electronjs.org)) requires access to a file named "RELEASES" when checking for updates, this endpoint will respond with a cached version of the file that contains a download link to a `.nupkg` file (the application update).
+
+## Testing
+
+To run the Jest tests under `test/`, simply run `yarn run jest`.
+
+Make sure the `TOKEN` and `URL` env vars are set before doing so as some tests require them.

@@ -6,14 +6,14 @@ Update release server based on [Hazel](https://github.com/vercel/hazel) and used
 
 ## Usage
 
-Deploy the app to https://desktop-app-releases.replit.app/
+Deploy the app to https://desktop.replit.com/
 
 Then set the following code in the Electron client:
 
 ```js
 const { app, autoUpdater } = require('electron')
 
-const server = "https://desktop-app-releases.replit.app"
+const server = "https://desktop.replit.com"
 const url = `${server}/update/${process.platform}/${app.getVersion()}`
 
 autoUpdater.setFeedURL({ url })

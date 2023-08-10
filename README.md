@@ -42,6 +42,10 @@ Such tokens have a max expiry date of 1 year so make sure to rotate them accordi
 
 Displays an overview page showing the cached repository with the different available platforms and file sizes. Links to the repo, releases, specific cached version and direct downloads for each platform are present.
 
+### /latest
+
+Returns metadata about the latest version of the app from the cache.
+
 ### /download
 
 Automatically detects the platform/OS of the visitor by parsing the user agent and then downloads the appropriate copy of your application.

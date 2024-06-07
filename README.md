@@ -6,7 +6,7 @@ Update release server based on [Hazel](https://github.com/vercel/hazel) and used
 
 ## Usage
 
-Deploy the app to https://desktop.replit.com/
+Deploy this server to https://desktop.replit.com/ via the deployments pane in the [Repl](https://replit.com/@util/desktop-releases)
 
 Then set the following code in the Electron client:
 
@@ -35,6 +35,8 @@ The following environment variables must be set:
 The token must be set to a [fine-grained personal access token](https://github.com/settings/tokens?type=beta) with access to the [replit/desktop](https://github.com/replit/desktop) repo and content-read permissions.
 
 Such tokens have a max expiry date of 1 year so make sure to rotate them accordingly.
+
+You can view and update the token in the Repl via the secrets pane for development and the deployments pane for production builds.
 
 ## Routes
 

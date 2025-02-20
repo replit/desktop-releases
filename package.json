@@ -5,7 +5,8 @@
   "main": "index.js",
   "description": "Update server for the desktop ",
   "scripts": {
-    "test": "jest **/*.test.js"
+    "test": "jest **/*.test.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "async-retry": "1.2.3",

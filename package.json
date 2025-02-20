@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "description": "Update server for the desktop ",
+  "scripts": {
+    "test": "jest **/*.test.js"
+  },
   "dependencies": {
     "async-retry": "1.2.3",
     "date-fns": "1.29.0",
@@ -12,7 +15,7 @@
     "fetch": "1.1.0",
     "finalhandler": "1.1.0",
     "handlebars": "4.7.7",
-    "jest": "24.0.0",
+    "jest": "24.9.0",
     "micro": "9.3.3",
     "ms": "2.1.1",
     "node-fetch": "2.6.7",
@@ -22,6 +25,7 @@
     "test-listen": "1.1.0"
   },
   "resolutions": {
-    "path-to-regexp": "^0.1.12"
+    "path-to-regexp": "^0.1.12",
+    "braces": "^3.0.3"
   }
 }
